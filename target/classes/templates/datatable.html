@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de workshops</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+
+</head>
+<body>
+<div>
+    <div>
+        <table id="table" class="display">
+            <thead>
+            <tr>
+                <td> <b> Nombre </b> </td>
+                <td> <b> Objetivo </b> </td>
+                <td> <b> Categoria </b> </td>
+                <td> <b> Palabras clave </b> </td>
+                <td> <b> Autor </b> </td>
+                <td> <b> Duración </b> </td>
+            </tr>
+            </thead>
+            <tbody>
+<!--                        <tr th:each="workshop, iStat : ${w}">-->
+<!--                            <td th:text="${workshop.name}"> </td>-->
+<!--                            <td th:text="${workshop.objective}"> </td>-->
+<!--                            <td th:text="${workshop.category.name}"> </td>-->
+<!--                            <td th:text="${workshop.keyword1 + ', ' + workshop.keyword2 + ', ' +workshop.keyword3}"> </td>-->
+<!--                            <td th:text="${workshop.author}"> </td>-->
+<!--                            <td th:text="${workshop.totalTime}"> </td>-->
+<!--                            <td> <a th:href="@{/detailWorkshop/{id}(id=${workshop.id})}" class="btn btn-primary"> Ver todo el detalle </a> </td>-->
+<!--                            <td> <a th:href="@{/AddActivity/{id}(id=${workshop.id})}" class="btn btn-primary"> Agregar actividad </a> </td>-->
+<!--                            <td> <a th:href="@{/updateWorkshop/{id}(id=${workshop.id})}" class="btn btn-primary"> Editar</a> </td>-->
+<!--                            <td> <a th:href="@{/report/{id}(id=${workshop.id})}" class="btn btn-primary"> Descargar como Word </a> </td>-->
+<!--                        </tr>-->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+<script>
+    ${document}.ready( function () {
+        ${'#table'}.DataTable();
+    } );
+</script >
+
+</body>
+</html>

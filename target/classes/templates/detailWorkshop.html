@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">,,
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="row">
+    <div class="col-6">
+        <label>Nombre:</label> <span th:text="${workshopData.name}"></span><br>
+        <label>Autor:</label> <span th:text="${workshopData.author}"></span><br>
+        <label>Objetivo:</label> <span th:text="${workshopData.objective}"></span><br>
+        <label>Categoría:</label> <span th:text="${workshopData.category.name}"></span><br>
+        <label>Palabras clave:</label> <span th:text="${workshopData.keyword1 + ', ' + workshopData.keyword2 + ', ' +workshopData.keyword3}"></span><br>
+        <label>Actividades:</label>
+        <div th:each="entry : ${workshopData.activities}">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    Nombre: <span th:text="${entry.name}"></span><br>
+                    Descripción: <span th:text="${entry.description}"></span><br>
+                    Notas: <span th:text="${entry.annexed}"></span><br>
+                    Duración: <span th:text="${entry.time}"></span><br>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-5">
+        <a th:href="@{/report/{id}(id=${workshopData.id})}" class="btn btn-primary"> Descargar como Word </a>
+        <a href="/" class="btn btn-primary">Volver al index</a>
+    </div>
+</div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

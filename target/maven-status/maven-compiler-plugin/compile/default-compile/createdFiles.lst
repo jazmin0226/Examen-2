@@ -1,0 +1,10 @@
+com\cenfotec\examen2\domain\Activity.class
+com\cenfotec\examen2\service\WorkshopService.class
+com\cenfotec\examen2\domain\Workshop.class
+com\cenfotec\examen2\service\ActivityService.class
+com\cenfotec\examen2\service\WorkshopServiceImpl.class
+com\cenfotec\examen2\repository\WorkshopRepository.class
+com\cenfotec\examen2\controller\WorkshopController.class
+com\cenfotec\examen2\repository\ActivityRepository.class
+com\cenfotec\examen2\service\ActivityServiceImpl.class
+com\cenfotec\examen2\Examen2Application.class
